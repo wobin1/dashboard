@@ -1,0 +1,32 @@
+<!-- <mat-sidenav-container>
+  <mat-sidenav mode="side" opened>Side nav content</mat-sidenav>
+  <mat-sidenav position="end" mode="side" opened></mat-sidenav>
+  <mat-sidenav-content>Main content</mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side"  opened>
+      <mat-list>
+        <mat-list-item> <button (click)="home()" mat-button>Home</button></mat-list-item>
+        <mat-list-item><button (click)="products()" mat-button>Products</button></mat-list-item>
+        <mat-list-item><button (click)="orders()" mat-button>Orders</button></mat-list-item>
+        <mat-list-item><button (click)="bookings()" mat-button>Bookings</button></mat-list-item>
+        
+      </mat-list>
+    </mat-sidenav>
+  
+    <mat-toolbar>
+      <button (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+       <mat-icon>menu</mat-icon>
+     </button>
+     <span style="margin-left: 5px;">Dashboard</span>
+     <span class="example-spacer"></span>
+     <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+      <img src="" alt="...">
+    </button>
+    <span>Admin</span>
+   </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-container>
